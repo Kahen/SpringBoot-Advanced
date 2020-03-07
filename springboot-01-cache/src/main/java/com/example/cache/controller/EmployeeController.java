@@ -22,4 +22,17 @@ public class EmployeeController {
         Employee employee = employeeService.getEmp(id);
         return employee;
     }
+
+    @GetMapping("/emp")
+    public Employee updateEmployee(Employee employee) {
+
+        Employee employee1 = employeeService.updateEmp(employee);
+        return employee1;
+    }
+
+    @GetMapping("deleteemp")
+    public String deleteEmployee(Integer id) {
+        employeeService.deleteEmp(id);
+        return "success";
+    }
 }

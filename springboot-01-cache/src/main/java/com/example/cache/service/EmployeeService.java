@@ -3,8 +3,12 @@ package com.example.cache.service;
 import com.example.cache.bean.Employee;
 import com.example.cache.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author Kahen
@@ -12,7 +16,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class EmployeeService {
-    @Autowired
+    @Resource
     EmployeeMapper employeeMapper;
 
     /**
@@ -34,10 +38,48 @@ public class EmployeeService {
      * @param id
      * @return
      */
-    @Cacheable(cacheNames = "emp", keyGenerator = "myKeyGenerator")
+    @Cacheable(cacheNames = "emp")
     public Employee getEmp(Integer id) {
         System.out.println("查询" + id + "号员工");
         Employee employee = employeeMapper.getEmpById(id);
         return employee;
+    }
+
+    /**
+     * @CachePut: 既调用方法，又更新缓存数据；
+     * 修改了数据库的某个数据，同时更新缓存
+     * 运行时机：
+     * 1.先调用目标方法
+     * 2.将目标方法结果缓存起来
+     * <p>
+     * 测试步骤：
+     * 1.查询1号员工；查询的结果会放在缓存中
+     * 2.以后查询还是之前的结果
+     * 3.更新1号员工；【lastName：zhangsan，gender=1；】
+     * 将方法的返回值也放进缓存了；key：传入的employee对象，返回的employee对象；
+     * 4。查询1号员工？
+     * 应该是更新后的员工，
+     * key="#employee.id"使用传入的参数的员工id
+     * key="result.id":使用的返回的id
+     * @Cacheable 的key是不能用@result
+     * <p>
+     * 为什么是更新前的？【1号员工没有在缓存中更新】
+     */
+    @CachePut(value = "emp", key = "#result.id")
+    public Employee updateEmp(Employee employee) {
+        System.out.println("updateEmp:" + employee);
+        employeeMapper.updateEmp(employee);
+        return employee;
+    }
+
+    /**
+     * @CacheEvict: 缓存清除
+     * key：指定要清除的数据
+     */
+    @CacheEvict(value = "emp", key = "#id")
+    public void deleteEmp(Integer id) {
+        System.out.println("deleteEmp" + id);
+        // employeeMapper.deleteEmpById(id);
+
     }
 }
