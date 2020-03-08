@@ -3,9 +3,8 @@ package com.example.cache.service;
 import com.example.cache.bean.Employee;
 import com.example.cache.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,6 +13,7 @@ import javax.annotation.Resource;
  * @author Kahen
  * @create 2020-03-04 9:13
  */
+@CacheConfig(cacheNames = "emp")
 @Service
 public class EmployeeService {
     @Resource
@@ -38,7 +38,7 @@ public class EmployeeService {
      * @param id
      * @return
      */
-    @Cacheable(cacheNames = "emp")
+    @Cacheable
     public Employee getEmp(Integer id) {
         System.out.println("查询" + id + "号员工");
         Employee employee = employeeMapper.getEmpById(id);
@@ -75,11 +75,30 @@ public class EmployeeService {
     /**
      * @CacheEvict: 缓存清除
      * key：指定要清除的数据
+     * allEntries:指定清除这个缓存中所有的数据
+     * beforeInvocation=false：缓存的清除是否在方法之前执行，
+     * 默认代表是在方法执行之后执行
      */
-    @CacheEvict(value = "emp", key = "#id")
+    @CacheEvict(/*value = "emp",*/ key = "#id", allEntries = true)
     public void deleteEmp(Integer id) {
         System.out.println("deleteEmp" + id);
         // employeeMapper.deleteEmpById(id);
+    }
 
+    /**
+     * @Caching 定义复杂的缓存规则
+     */
+    @Caching(
+            cacheable = {
+                    @Cacheable(/*value = "emp",*/key = "#lastName")
+            },
+            put = {
+                    @CachePut(/*value = "emp",*/key = "#result.id"),
+                    @CachePut(/*value = "emp",*/key = "#result.email")
+
+            }
+    )
+    public Employee getEmpByLastName(String lastName) {
+        return employeeMapper.getEmpByLastName(lastName);
     }
 }
