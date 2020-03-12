@@ -21,6 +21,8 @@ import org.springframework.cache.annotation.EnableCaching;
  * 1.安装redis，使用docker
  * 2.引入redis的starter
  * 3.配置redis
+ * 4.测试缓存
+ *      原理：CacheManager===Cache 缓存逐渐实际给缓存中存取数据
  */
 @MapperScan("com.example.cache.mapper")
 @SpringBootApplication
