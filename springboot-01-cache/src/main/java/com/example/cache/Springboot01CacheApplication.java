@@ -17,6 +17,10 @@ import org.springframework.cache.annotation.EnableCaching;
  * 步骤：
  * 1、开启基于注解的缓存
  * 2、标注缓存注解即可
+ * 三、整个redis作为缓存
+ * 1.安装redis，使用docker
+ * 2.引入redis的starter
+ * 3.配置redis
  */
 @MapperScan("com.example.cache.mapper")
 @SpringBootApplication

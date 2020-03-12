@@ -10,7 +10,7 @@
         <module name="springboot-01-cache" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="springboot-01-cache" target="1.8" />
     </bytecodeTargetLevel>
   </component>
