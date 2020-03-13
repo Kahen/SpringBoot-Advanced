@@ -4,6 +4,9 @@ import com.example.cache.bean.Department;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+/**
+ * @author Kahen
+ */
 @Mapper
 public interface DepartmentMapper {
 
