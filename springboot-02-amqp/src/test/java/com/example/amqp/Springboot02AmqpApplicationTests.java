@@ -2,6 +2,9 @@ package com.example.amqp;
 
 import com.example.amqp.bean.Book;
 import org.junit.jupiter.api.Test;
+import org.springframework.amqp.core.AmqpAdmin;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,6 +17,17 @@ import java.util.Map;
 class Springboot02AmqpApplicationTests {
     @Resource
     RabbitTemplate rabbitTemplate;
+    @Resource
+    AmqpAdmin amqpAdmin;
+
+    @Test
+    public void createExchange() {
+        // amqpAdmin.declareExchange(new DirectExchange("amqpadmin.exchange"));
+        // amqpAdmin.declareQueue(new Queue("amqpadmin.queue"));
+        amqpAdmin.declareBinding(new Binding("amqpadmin.queue", Binding.DestinationType.QUEUE, "amqpadmin.exchange",
+                "amqpadmin.hh", null));
+        System.out.println("创建完成");
+    }
 
     /**
      * 1. 单播 （点对点）
