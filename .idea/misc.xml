@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/springboot-01-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-02-amqp/pom.xml" />
       </list>
     </option>
   </component>
