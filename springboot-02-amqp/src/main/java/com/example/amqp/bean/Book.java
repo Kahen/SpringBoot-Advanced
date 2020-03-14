@@ -7,10 +7,9 @@ import lombok.*;
  * @version 1.0
  * @date 2020-03-14 17:18
  */
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class Book {
     private String bookName;
     private String author;

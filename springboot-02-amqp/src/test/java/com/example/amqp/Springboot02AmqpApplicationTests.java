@@ -43,7 +43,7 @@ class Springboot02AmqpApplicationTests {
      */
     @Test
     public void sendMsg() {
-        rabbitTemplate.convertAndSend("exchange.fanout", "", new Book("水浒传   ", "施耐庵"));
+        rabbitTemplate.convertAndSend("exchange.fanout", "", new Book("红楼梦", "曹雪芹"));
         System.out.println();
     }
 }
