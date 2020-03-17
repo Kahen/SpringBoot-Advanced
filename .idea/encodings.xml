@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/springboot-01-cache/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-02-amqp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-02-amqp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-03-elasticsearch/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
