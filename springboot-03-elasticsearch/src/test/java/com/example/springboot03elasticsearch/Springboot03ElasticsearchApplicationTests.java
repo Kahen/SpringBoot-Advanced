@@ -1,6 +1,8 @@
 package com.example.springboot03elasticsearch;
 
 import com.example.springboot03elasticsearch.bean.Article;
+import com.example.springboot03elasticsearch.bean.Book;
+import com.example.springboot03elasticsearch.elastic.repository.BookRepository;
 import io.searchbox.client.JestClient;
 import io.searchbox.core.Index;
 import io.searchbox.core.Search;
@@ -16,6 +18,22 @@ class Springboot03ElasticsearchApplicationTests {
 
     @Resource
     JestClient jestClient;
+    @Resource
+    BookRepository bookRepository;
+
+    @Test
+    public void test02() {
+        // Book book=new Book();
+        // bookRepository.index(book);
+        // book.setId(1);
+        // book.setAuthor("吴承恩");
+        // book.setBookName("西游记");
+        // bookRepository.index(book);
+        for (Book book : bookRepository.findBooksByBookName("游")) {
+            System.out.println(book);
+
+        }
+    }
 
     @Test
     void contextLoads() {
