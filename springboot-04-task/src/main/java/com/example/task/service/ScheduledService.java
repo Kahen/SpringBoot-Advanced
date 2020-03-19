@@ -27,7 +27,6 @@ public class ScheduledService {
      * 【0 0 2 LW * ?】每个月的最后一个工作日凌晨2点执行一次
      * 【0 0 2-4 ? * 1#1】每个月的第一个周一凌晨2点到4点期间，每个整点都执行一次；
      */
-    @Scheduled(cron = "0/2 * * * * MON-FRI")
     public void hello() {
         System.out.println("hello...");
     }
