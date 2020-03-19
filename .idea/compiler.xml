@@ -7,25 +7,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-04-task" />
+        <module name="securing-web" />
+        <module name="springboot-05-security" />
         <module name="springboot-01-cache" />
-        <module name="springboot-02-amqp" />
+        <module name="springboot-04-task" />
+        <module name="securingweb" />
         <module name="springboot-03-elasticsearch" />
+        <module name="springboot-02-amqp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="securing-web" target="1.8" />
+      <module name="securingweb" target="1.8" />
       <module name="springboot-01-cache" target="1.8" />
       <module name="springboot-02-amqp" target="1.8" />
       <module name="springboot-03-elasticsearch" target="1.8" />
       <module name="springboot-04-task" target="1.8" />
+      <module name="springboot-05-security" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="securing-web" options="-parameters" />
+      <module name="securingweb" options="-parameters" />
       <module name="springboot-01-cache" options="-parameters" />
       <module name="springboot-02-amqp" options="-parameters" />
       <module name="springboot-03-elasticsearch" options="-parameters" />
       <module name="springboot-04-task" options="-parameters" />
+      <module name="springboot-05-security" options="-parameters" />
     </option>
   </component>
 </project>

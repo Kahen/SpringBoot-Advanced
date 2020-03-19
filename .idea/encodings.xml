@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/securing-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-01-cache/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-02-amqp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-02-amqp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-03-elasticsearch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-04-task/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-05-security/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
