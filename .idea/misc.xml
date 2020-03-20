@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/springboot-04-task/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-05-security/pom.xml" />
         <option value="$PROJECT_DIR$/securing-web/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-ticket/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-user/pom.xml" />
       </list>
     </option>
   </component>
