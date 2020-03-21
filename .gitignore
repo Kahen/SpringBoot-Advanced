@@ -30,3 +30,5 @@ build/
 ### VS Code ###
 .vscode/
 /src/main/java/com/example/cache/Springboot01CacheApplication.java
+src/main/resources/static/
+src/main/resources/templates/
