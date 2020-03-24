@@ -7,23 +7,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="securing-web" />
-        <module name="springboot-06-cloud-eureka" />
-        <module name="springboot-02-amqp" />
-        <module name="SpringBoot-Advanced" />
-        <module name="springboot-01-cache" />
-        <module name="provider-ticket" />
-        <module name="springboot-05-security" />
-        <module name="springboot-06-springcloud-consumer-user" />
-        <module name="springboot-04-task" />
-        <module name="springboot-06--springcloud-provider-ticket" />
-        <module name="consumer-user" />
-        <module name="springboot-03-elasticsearch" />
+        <module name="devploy" />
         <module name="securingweb" />
+        <module name="demo" />
+        <module name="springboot-04-task" />
+        <module name="springboot-06-springcloud-consumer-user" />
+        <module name="provider-ticket" />
+        <module name="springboot-06--springcloud-provider-ticket" />
+        <module name="springboot-01-cache" />
+        <module name="springboot-03-elasticsearch" />
+        <module name="springboot-06-cloud-eureka" />
+        <module name="consumer-user" />
+        <module name="springboot-05-security" />
+        <module name="SpringBoot-Advanced" />
+        <module name="springboot-02-amqp" />
+        <module name="securing-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="consumer-user" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="devploy" target="1.8" />
       <module name="provider-ticket" target="1.8" />
       <module name="securing-web" target="1.8" />
       <module name="securingweb" target="1.8" />
@@ -41,6 +45,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="consumer-user" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="devploy" options="-parameters" />
       <module name="provider-ticket" options="-parameters" />
       <module name="securing-web" options="-parameters" />
       <module name="securingweb" options="-parameters" />
