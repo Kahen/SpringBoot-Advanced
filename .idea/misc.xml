@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/devploy/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-08-actuator/pom.xml" />
       </list>
     </option>
   </component>

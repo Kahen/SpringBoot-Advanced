@@ -21,6 +21,7 @@
         <module name="springboot-05-security" />
         <module name="SpringBoot-Advanced" />
         <module name="springboot-02-amqp" />
+        <module name="springboot-08-actuator" />
         <module name="securing-web" />
       </profile>
     </annotationProcessing>
@@ -39,6 +40,7 @@
       <module name="springboot-06--springcloud-provider-ticket" target="1.8" />
       <module name="springboot-06-cloud-eureka" target="1.8" />
       <module name="springboot-06-springcloud-consumer-user" target="1.8" />
+      <module name="springboot-08-actuator" target="1.8" />
       <module name="SpringBoot-Advanced" target="1.5" />
     </bytecodeTargetLevel>
   </component>
@@ -58,6 +60,7 @@
       <module name="springboot-06--springcloud-provider-ticket" options="-parameters" />
       <module name="springboot-06-cloud-eureka" options="-parameters" />
       <module name="springboot-06-springcloud-consumer-user" options="-parameters" />
+      <module name="springboot-08-actuator" options="-parameters" />
     </option>
   </component>
 </project>
