@@ -8,17 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="securing-web" />
-        <module name="consumer-user" />
         <module name="springboot-06-cloud-eureka" />
+        <module name="springboot-02-amqp" />
+        <module name="SpringBoot-Advanced" />
         <module name="springboot-01-cache" />
         <module name="provider-ticket" />
-        <module name="securingweb" />
-        <module name="springboot-06-springcloud-consumer-user" />
-        <module name="springboot-06--springcloud-provider-ticket" />
-        <module name="springboot-04-task" />
-        <module name="springboot-02-amqp" />
-        <module name="springboot-03-elasticsearch" />
         <module name="springboot-05-security" />
+        <module name="springboot-06-springcloud-consumer-user" />
+        <module name="springboot-04-task" />
+        <module name="springboot-06--springcloud-provider-ticket" />
+        <module name="consumer-user" />
+        <module name="springboot-03-elasticsearch" />
+        <module name="securingweb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -34,6 +35,7 @@
       <module name="springboot-06--springcloud-provider-ticket" target="1.8" />
       <module name="springboot-06-cloud-eureka" target="1.8" />
       <module name="springboot-06-springcloud-consumer-user" target="1.8" />
+      <module name="SpringBoot-Advanced" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -46,7 +48,7 @@
       <module name="springboot-02-amqp" options="-parameters" />
       <module name="springboot-03-elasticsearch" options="-parameters" />
       <module name="springboot-04-task" options="-parameters" />
-      <module name="springboot-05-security" options="-parameters" />
+      <module name="springboot-05-security" options="" />
       <module name="springboot-06--springcloud-provider-ticket" options="-parameters" />
       <module name="springboot-06-cloud-eureka" options="-parameters" />
       <module name="springboot-06-springcloud-consumer-user" options="-parameters" />
